@@ -1,0 +1,103 @@
+1. baron
+2. begayo
+3. calma
+4. chua
+5. cruz
+6. de_jesus
+7. gacelos
+8. galo
+9. garcia
+10. jilwani
+11. labaco
+12. llantos
+13. malaran
+14. mapagu
+15. mendoza
+16. nicolas
+17. rosel1
+18. rosel2
+19. serrano
+20. velez
+
+1. abaya
+2. abrasaldo
+3. angeles
+4. deladia
+5. fernandez
+6. genesela
+7. jimenez
+8. kaur
+9. lanza
+10. magpantay
+11. maungca
+12. minglana
+13. noble
+14. ong
+15. pascual
+16. pundavela
+17. relox
+18. santillan
+19. serafico
+20. tagubuan
+21. volante
+
+amador
+baquiran
+canaria
+cristobal
+francisco
+hiyastro
+magallanes
+rafael
+rosauro
+
+1. abaya
+2. abrasaldo
+3. amador
+4. angeles
+5. baquiran
+6. baron
+7. begayo
+8. calma
+9. canaria
+10. chua
+11. cristobal
+12. cruz
+13. de_jesus
+14. deladia
+15. fernandez
+16. francisco
+17. gacelos
+18. galo
+19. garcia
+20. genesela
+21. hiyastro
+22. jilwani
+23. jimenez
+24. kaur
+25. labaco
+26. lanza
+27. llantos
+28. magallanes
+29. magpantay
+30. malaran
+31. mapagu
+32. maungca
+33. mendoza
+34. minglana
+35. nicolas
+36. noble
+37. ong
+38. pascual
+39. pundavela
+40. rafael
+41. relox
+42. rosauro
+43. rosel1
+44. rosel2
+45. santillan
+46. serafico
+47. serrano
+48. tagubuan
+49. velez
+50. volante

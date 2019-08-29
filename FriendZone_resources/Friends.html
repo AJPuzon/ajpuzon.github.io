@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Da FriendZone - Friend List</title>
+		<link rel="stylesheet" type="text/css" href="FriendZone stylesheet.css">
+		<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto+Mono" rel="stylesheet">
+		<link rel="icon" type="image/png" href="icon 16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="icon 32.png" sizes="32x32">
+		<style>
+			body {
+				background: black url(papersmall.png) no-repeat fixed center;
+				background-size: cover;
+			}
+		.bio:hover {
+			width: 720px;
+			height: 300px;
+			transition: 0.5s;
+			border: 0px;
+		}
+		</style>
+		<script src="SeamlessLoop-Master/SeamlessLoop.js"></script>
+		<script>
+			var loop = new SeamlessLoop();
+			loop.addUri("swimming.ogg", 181812, "swim1")
+			async function soundsLoaded() {
+				var n = 1;
+				var audio = new Audio('beep.ogg');
+				audio.play();
+				await sleep(159)
+				loop.start("swim" + n);
+			};
+			function sleep(ms) {
+				return new Promise(resolve => setTimeout(resolve, ms));
+			}
+			window.onload = async function() {
+				soundsLoaded();;
+			};
+		</script>
+	</head>
+<body>
+<header>
+	<center>
+		<a href="HomeLogged.html">
+			<img class="MajorTom"src="logo2.gif">
+		</a>
+			<div class="Major">
+				<a href="HomeLogged.html">HOME</a> | 
+				<font title="you're already here!">FRIEND LIST</font> | 
+				<a href="AboutLogged.html">ABOUT</a> | 
+				<a href="Home.html">LOG OUT</a>
+			</div>
+			<hr />
+	</center>
+</header>
+<section>
+<center>
+	<article class="Center">
+			<h2 class="Major">FRIEND LIST</h2>
+			Here are your friends, Persune, in neat tables!
+			</br>
+			<br>
+		<div>
+			<h2 class="Major">TEACHERS</h2>
+			<iframe src="list_teach.html" class="bio"></iframe>
+			<h2 class="Major">GIRLS</h2>
+			<iframe src="list_girls.html" class="bio"></iframe>
+			<h2 class="Major">BOYS</h2>
+			<iframe src="list_boys.html" class="bio"></iframe>
+		</div>
+	</article>
+	<footer>
+		<div>
+			<p>bg track: <a href="https://youtu.be/EHbvW_Vk168" target="_blank">
+			Kitsune<sup>2</sup> - Swimming the Reef</a> <br>
+			not playing? <button onclick="soundsLoaded()">ok!</button><br>
+			don't like it? <button onclick="loop.stop()">ok.</button></p>
+		</div>
+		Return to <a class="Major" href="HomeLogged.html"> HOME </a>
+	</footer>
+</section>
+</center>
+</body>
+</html>

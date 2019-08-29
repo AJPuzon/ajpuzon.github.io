@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Da FriendZone - Persune Makat</title>
+		<link rel="stylesheet" type="text/css" href="FriendZone stylesheet.css">
+		<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto+Mono" rel="stylesheet">
+		<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+		<link rel="icon" type="image/png" href="icon 16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="icon 32.png" sizes="32x32">
+		<meta charset="UTF-8">
+		<style>
+		:root {
+			--bggray1: rgba(8, 8, 8, 0.5);
+			--bggray2: rgba(18, 18, 18, 0.5);
+			--palette1: #fe83a8;
+			--palette2: #984e64;
+			--palette3: #83fed9;
+			--palette4: #a8fe83;
+			--monohue: /*; you have no idea how hard these three took me to do*/ -18deg;
+			--monosat: 98.4%;
+			--monolum: 75.49%;
+		}
+		body {
+			background: black url(profiles/Persune/bg2fix.png) no-repeat fixed center;
+			background-size: cover;
+		}
+		.stardust {
+			margin: -20px;
+			perspective: 1px;
+			height: 97vh;
+			overflow-y: auto;
+		}
+		.stardust__layer {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		.stardust__layer--stuff {
+			transform: translateZ(0) scale(1);
+			mix-blend-mode: screen;
+			
+		}
+		.stardust__layer--bg {
+			background: rgba(0, 0, 0, 0) url(profiles/Persune/bgfix.gif) repeat scroll center;
+			background-position:1000px -1000px;
+			transform: translateZ(-10px) scale(10.8);
+			margin: -30px;
+			height: 110vh;
+			filter: opacity(50%);
+		}
+		.stardust__layer--bg2 {
+			background: rgba(0, 0, 0, 0) url(profiles/Persune/bgfix.gif) repeat scroll center;
+			transform: translateZ(-50px) scale(50);
+			margin: -30px;
+			height: 110vh;
+			filter: opacity(50%);
+		}
+		.content {
+			margin: 20px;
+			left: 0;
+			right: 0;
+			z-index: 2;
+		}
+		#playlist {
+			background: url(static2.gif) repeat center;
+		}
+		.Profile .Pic {
+			position: absolute;
+			filter: invert(0%) opacity(100%);
+			transition: 0.5s;
+		}
+		video {
+			filter: opacity(75%);
+			mix-blend-mode: exclusion;
+		}
+		</style>
+		<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.js'></script>
+		<script src="profiles/playlist.js"></script>
+		<script>
+			// Show loading animation.
+				var playPromise = video.play();
+
+			if (playPromise !== undefined) {
+				playPromise.then(_ => {
+				// Automatic playback started!
+				// Show playing UI.
+				})
+			.catch(error => {
+				// Auto-play was prevented
+				// Show paused UI.
+				});
+			}
+		</script>
+	</head>
+<body>
+<div class="stardust">
+	<div class="stardust__layer stardust__layer--bg"></div>
+	<div class="stardust__layer stardust__layer--bg2"></div>
+	<div class="stardust__layer stardust__layer--stuff">
+		<div class="content">
+		<header>
+			<center>
+				<a class="logo" href="HomeLogged.html">
+					<img class="MajorTom" src="logomonod.gif">
+				</a>
+					<div class="Major">
+						<a href="HomeLogged.html">HOME</a> | 
+						<a href="Friends.html">FRIEND LIST</a> | 
+						<a href="AboutLogged.html">ABOUT</a> | 
+				<a href="Home.html">LOG OUT</a>
+					</div>
+					<hr />
+			</center>
+		</header>
+		<section>
+		<center>
+			<article>
+				<div>
+					<div class="Profile">
+						<a href="https://twitter.com/ShikakiRIKKA/status/1092077048057733120" target="_blank">
+						<div class="image">
+							<img class="Pic" title="Art by @ShikakiRIKKA on Twitter~" src="profiles/Persune/across the universe no bg.png" target="_blank">
+							<img class="PicReal" title="Art by @ShikakiRIKKA on Twitter~" src="profiles/Persune/across the universe.png" target="_blank">
+						</div>
+						</a>
+						<p class="Major">NICKNAMES:</br>"Great King Rat <i class="em em-crown"></i>"</br>"Rat Boy <i class="em em-rat"></i>"</p>
+					</div>
+					<h2 class="Major">Dagga Persune Makat</h2>
+						<p class="aragraph">I'm just you average chiptuner, mixer, fur, a real nerd and dork at heart, and if you're lucky enough to know me deeper,
+						someone behind this shell of a persona/fursona...</p>
+						<p class="aragraph">I like things with a certain charming aesthetic to them... I do also like quirky stuff, although not bad ones!!
+						I also happen to like mice and rats~ But most importantly, I love Roger(not Taylor)! He's the love of my life~</p>
+						<p class="aragraph emo">On that note, I would like to apologize in advance in case my profile page is causing too much strain on older computers 
+						<i class="em em-sweat_smile"></i></p>
+					<div>
+						<br>
+						<h2 class="Major">BIOLOGICAL INFORMATION</h2>
+						<iframe src="profiles/Persune/bio.html" class="bio"></iframe>
+					</div>
+				</div>
+			</article>
+			<article>
+				<div>
+					<h2 class="Major">BOHEMIAN RHAPSODY</h2>
+						<center>
+							<p>And now, a HD vid of Bohemian Rhapsody, just because!</p>
+							<iframe width="640" height="480" src="https://www.youtube.com/embed/JhXe17Jna6I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<!--
+							<video width="90%" controls autoplay src="profiles\Persune\Bohemian Rhapsody.mp4">
+								Whoops! Looks like your browser doesn't support this.
+							</video>
+						    -->
+						</center>
+				</div>
+			</article>
+			<article>
+				<div>
+					<h2 class="Major">MUSIC</h2>
+						<center>
+							<p>These favourite tracks of mine are what represents me best, take a listen if you must!</p>
+							<br>
+							click on one of the tracks!
+								<audio id="audio" id="uploadedFile" preload="auto" tabindex="0" controls="" type="audio/mpeg">
+								whoops! looks like it isn't supported :(</audio></br>
+								<ul id="playlist">
+									<div class="bg-playlist"></div>
+									<li><a class="trax" href="profiles\Persune\Great King Rat.mp3">
+									Queen - Great King Rat</a></li>
+									<li><a class="trax" href="profiles\Persune\HELL YEAH.mp3">
+									RQ - HELL YEAH</a></li>
+									<li><a class="trax" href="profiles\Persune\SLEEPY EYES AGAIN.mp3">
+									The Quick Brown Fox - SLEEPY EYES AGAIN</a></li>
+									<li><a class="trax" href="profiles\Persune\beautiful (JQ & Emoticon RMX).mp3">
+									belladonnakillz - beautiful (JQ & Emoticon RMX)</a></li>
+									<li><a class="trax" href="profiles\Persune\MUS_GRDN.mp3">
+									HALLEY LABS SOUND CREATION - MUS_GRDN</a></li>
+									<li><a class="trax" href="profiles\Persune\7th Snow.mp3">
+									JACKALQ~1 EXE infected by -.EXE - 7th Snow</a></li>
+									<li><a class="trax" href="profiles\Persune\Never Want to Be a Hero.mp3">
+									Kitsune<sup>2</sup> - Never Want to Be a Hero</a></li>
+									<li><a class="trax" href="profiles\Persune\iceberg.mp3">
+									hyi - ice (iceberg edit)</a></li>
+									<li><a class="trax" href="profiles\Persune\TOUCH TOUCH.mp3">
+									RQ - TOUCH TOUCH</a></li>
+									<li><a class="trax" href="profiles\Persune\I Prefer The Sky (Remix).mp3">
+									Renard - I Prefer The Sky (Remix)</a></li>
+									<li><a class="trax" href="profiles\Persune\SUMMIT (FT. ELLIE GOULDING).mp3">
+									Skrillex - Summit (ft. Ellie Goulding)</a></li>
+									<li><a class="trax" href="profiles\Persune\Protoman.mp3">
+									Mega Man 3 - Protoman</a></li>
+									<li><a class="trax" href="profiles\Persune\Epilogue.mp3">
+									Mega Man 2 - Epilogue</a></li>
+								</ul>
+								<a href="https://media.giphy.com/media/AW6BKZmILrnW/giphy.gif" target="_blank">image source</a></br>
+						</center>
+				</div>
+			</article>
+			<footer>
+				<p>Return to <a class="Major" href="HomeLogged.html"> HOME </a></p>
+			</footer>
+		</section>
+		</center>
+		</div>
+	</div>
+</div>
+</body>
+</html>

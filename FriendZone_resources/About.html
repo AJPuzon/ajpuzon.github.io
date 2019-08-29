@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Da FriendZone - About</title>
+		<link rel="stylesheet" type="text/css" href="FriendZone stylesheet.css">
+		<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto+Mono" rel="stylesheet">
+		<link rel="icon" type="image/png" href="icon 16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="icon 32.png" sizes="32x32">
+		<style>
+			body {
+				background: black url(papersmall.png) no-repeat fixed center;
+				background-size: cover;
+			}
+			.Profile {
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+			.bio {
+				height: 40px;
+			}
+			.bio:hover {
+				height: 527px;
+			}
+		</style>
+		<script src="SeamlessLoop-Master/SeamlessLoop.js"></script>
+		<script>
+			var loop = new SeamlessLoop();
+			loop.addUri("grey.ogg", 68000, "grey1")
+			async function soundsLoaded() {
+				var n = 1;
+				var audio = new Audio('beep.ogg');
+				audio.play();
+				await sleep(159)
+				loop.start("grey" + n);
+			};
+			function sleep(ms) {
+				return new Promise(resolve => setTimeout(resolve, ms));
+			}
+			window.onload = function() {
+				soundsLoaded();;
+			};
+		</script>
+	</head>
+<body>
+<header>
+	<center>
+		<a href="Home.html">
+			<img class="MajorTom"src="logo2.gif">
+		</a>
+			<div class="Major">
+				<a href="Home.html">HOME</a> | <a href="Friend List.html">FRIEND LIST</a> | <font title="you're already here!">ABOUT</font>
+			</div>
+			<hr />
+	</center>
+</header>
+<center>
+<section>
+	<article>
+		<div>
+			<h2 class="Major">TIPS AND GUIDE</h2>
+			<p class="Center">Here are some tips and guides in navigating this webpage!</p>
+				<div class="Profile">
+					<div class="image">
+					<img src="profiles\Profile Pics\not-found.gif">
+					</div>
+					<p class="Major">Hover over any monochrome images to show their true colors!</p>
+				</div>
+				<div>
+					<p class="aragraph">-Hover over any <font class="Major" href="AboutLogged.html">GRAY AREAS</font> to see them pulsate!</p>
+					<p class="aragraph">-Click anywhere you like! I encourage you to explore this small website</p>
+					<p class="aragraph">-This website contains audio, so turn on your speakers or use some headphones!</p>
+					<p class="aragraph">-This website is developed and tested on Chrome and its cohorts. Since it's only tested on such,
+					compatibility issues may arise. Please ensure that you are using the latest version of Chrome.</p>
+					<p class="aragraph">-Note that creating a personalized account or modifying anything just isn't possible at the moment,
+					due to the programmer's laziness to implement such features. (sorry, can't do it :P) unless, you can code it for me hehe</p>
+					<p class="aragraph">-This website is only a proof-of-concept and a requirement in the subject ICT 10.</p>
+					<h2 class="Major">HOVER TO SEE MORE INFO</h2>
+					<iframe src="infodemo.html" class="bio"></iframe>
+				</div>
+		</div>
+		<div>
+			<h2 class="Major">ABOUT</h2>
+			<p class="aragraph"><a class="Major">Da FriendZone</a> (not to be confused with
+			<a href="https://twitter.com/dasharez0ne" target="_blank">"da sharez0ne"</a>, please don't) is a 
+			semi-fictional but somewhat a proof-of-concept social medium website that 
+			(as of February 2019) serves only one purpose:
+			</p>
+			<p class="aragraph">- To list and document the somewhat "social" circles of the maker of this
+				website, Persune Makat (aka G-2415)</p>
+			<p class="aragraph">Please don't search him up. Respect his intention of living peacefully
+				in "teh interwebz"...</p>
+			<p class="aragraph">But it's not like you're able to find him by conventional means anyways...
+				All you get is a bunch of perfume ads and a city called Makati, hehehe...</p></br>
+			<p class="aragraph">This website is also inspired by the web design of modern websites and
+			<a href="http://heckscaper.com" target="_blank">Emma's Homepage!</a></p>
+			<p class="aragraph">The name is a play on the concept of friendzoning, something for all you hopeless romantics out there! hehehe...</p>
+		</div>
+		</br>
+		<div>
+			<h2 class="Major">MESSAGE FROM THE PROGRAMMER</h2>
+			<p class="aragraph">Hi, fellow netizens! I'm Persune, some call me Dagga, others Gumball2415, but call me whatever you like! 
+			(of all the three, of course :P)</p>
+			<p class="aragraph">I do hope you find my website (or my programs! I run Sattelite & Stardust Software Solutions) really neat,
+			because I put a lot of effort and love into making them (super complicated)! </p>
+		</div>
+	</article>
+	<footer>
+		<div>
+			<p>bg track: <a href="https://youtu.be/RpGESG_nMLQ" target="_blank">
+			Kitsune<sup>2</sup> - Grey Sky Greyhound</a> <br>
+			not playing? <button onclick="soundsLoaded()">ok!</button><br>
+			don't like it? <button onclick="loop.stop()">ok.</button></p>
+		</div>
+		Return to <a class="Major" href="Home.html"> HOME </a>
+	</footer>
+</section>
+</center>
+</body>
+</html>

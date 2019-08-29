@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Da FriendZone - Home</title>
+		<link rel="stylesheet" type="text/css" href="FriendZone stylesheet.css">
+		<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto+Mono" rel="stylesheet">
+		<link rel="icon" type="image/png" href="icon 16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="icon 32.png" sizes="32x32">
+		<style>
+			body {
+				background: black url(papersmall.png) no-repeat fixed center;
+				background-size: cover;
+			}
+			section {
+				height: 1vh;
+			}
+		</style>
+		<script src="SeamlessLoop-Master/SeamlessLoop.js"></script>
+		<script>
+			var loop = new SeamlessLoop();
+			loop.addUri("brambleintro.ogg", 9351, "bramble1")
+			loop.addUri("bramble.ogg", 79490, "bramble2")
+			async function soundsLoaded() {
+				window.startTime = (new Date).getTime();
+				var n = 1;
+				var audio = new Audio('beep.ogg');
+				audio.play();
+				await sleep(159);
+				loop.start("bramble" + n);
+				await sleep(9347);
+				n++;
+				loop.update("bramble" + n, false);
+				var lapsed = (new Date).getTime() - window.startTime;
+				console.log('loop started at ' + lapsed);
+			};
+			async function stopIt() {
+				if ((new Date).getTime() - window.startTime < 9347) {
+					loop.stop();
+					var lapsed = (new Date).getTime() - window.startTime;
+					console.log('intro stopped at ' + lapsed);
+					await sleep(9509 - lapsed);
+					loop.stop();
+					var lapsed = (new Date).getTime() - window.startTime;
+					console.log('loop stopped at ' + lapsed);
+				} else {
+					loop.stop();
+					var lapsed = (new Date).getTime() - window.startTime;
+					console.log('loop stopped at ' + lapsed);
+				}
+			};
+			function sleep(ms) {
+				return new Promise(resolve => setTimeout(resolve, ms));
+			};
+			window.onload = function() {
+				soundsLoaded();;
+			};
+			// too much work for stopping the second loop, but hey
+		</script>
+	</head>
+<body>
+<header>
+	<center>
+		<img class="MajorTom"src="logo2.gif">
+			<div class="Major">
+				<font title="you're already here!">HOME</font> | <a href="Friend List.html">FRIEND LIST</a> | <a href="About.html">ABOUT</a>
+			</div>
+			<hr />
+	</center>
+</header>
+<section>
+<center>
+	<article>
+		<div class="Center">
+			<h2 class="Major">HOME</h2>
+				Welcome to <font class="Major">Da FriendZone</font>! Don't be sad, you'll always have friends ;) </br>
+				<a class="Major" href="Login.html">Login</a> or <font class="Major">get out</font>! <br>
+				Be sure to check out the <a class="Major" href="About.html">About</a> page for more info! <br><br>
+			<a target="_blank" href="https://www.deviantart.com/whygena/art/Cream-Soda-756452502">
+				<img title="art by Whygena" width="70%"src="reggie.jpg">
+			</a>
+		</div>
+	</article>
+	<footer>
+		<div>
+			bg track: <a href="https://www.youtube.com/watch?v=m-5wKcWdOQw" target="_blank">
+			Kitsune<sup>2</sup> - A Bramble on Elm Street</a> <br>
+			not playing? <button onclick="soundsLoaded()">ok!</button><br>
+			don't like it? <button onclick="stopIt()">ok.</button>
+		</div>
+	</footer>
+</center>
+</section>
+</body>
+</html>

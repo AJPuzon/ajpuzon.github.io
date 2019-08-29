@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Da FriendZone - Elias Rosel</title>
+		<link rel="stylesheet" type="text/css" href="FriendZone stylesheet.css">
+		<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto+Mono" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
+		<link rel="icon" type="image/png" href="icon 16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="icon 32.png" sizes="32x32">
+		<script>
+			function myFunction() {
+				document.getElementById("inColor").value = "#89D947";
+				document.documentElement.style
+					.setProperty('--palette1', "#89D947");
+				document.documentElement.style
+					.setProperty('--palette2', "#52822a");
+				document.documentElement.style
+					.setProperty('--palette3', "#7626b8");
+				document.documentElement.style
+					.setProperty('--palette4', "#b139ff");
+				document.documentElement.style
+					.setProperty('--monohue', '92.8767deg');
+				document.documentElement.style
+					.setProperty('--monosat', '65.7658%');
+				document.documentElement.style
+					.setProperty('--monolum', '112.941%');
+			}
+			function changeColor() {
+				var color = document.getElementById("inColor").value;
+				var r = parseInt(color.substr(1,2), 16); // Grab the hex representation of red (chars 1-2) and convert to decimal (base 10).
+				var g = parseInt(color.substr(3,2), 16);
+				var b = parseInt(color.substr(5,2), 16);
+
+				function rgbToHsl(r, g, b){
+					r /= 255, g /= 255, b /= 255;
+					var max = Math.max(r, g, b), min = Math.min(r, g, b);
+					var h, s, l = (max + min) / 2;
+
+					if(max == min){
+						h = s = 0; // achromatic
+					}else{
+						var d = max - min;
+						s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+						switch(max){
+							case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+							case g: h = (b - r) / d + 2; break;
+							case b: h = (r - g) / d + 4; break;
+						}
+						h /= 6;
+					}
+					return [h, s, l];
+				}
+				function ColorLuminance(hex, lum) {
+
+					// validate hex string
+					hex = String(hex).replace(/[^0-9a-f]/gi, '');
+					if (hex.length < 6) {
+						hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+					}
+					lum = lum || 0;
+
+					// convert to decimal and change luminosity
+					var rgb = "#", c, i;
+					for (i = 0; i < 3; i++) {
+						c = parseInt(hex.substr(i*2,2), 16);
+						c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+						rgb += ("00"+c).substr(c.length);
+					}
+
+					return rgb;
+				}
+				/*! @license https://github.com/onury/invert-color */
+				!function(r,n){"object"==typeof exports&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):r.invert=n()}(this,function(){"use strict";var t=Math.sqrt(1.05*.05)-.05,n=/^(?:[0-9a-f]{3}){1,2}$/i,i={black:"#000000",white:"#ffffff",threshold:t};function o(r){if("#"===r.slice(0,1)&&(r=r.slice(1)),!n.test(r))throw new Error('Invalid HEX color: "'+r+'"');return 3===r.length&&(r=r[0]+r[0]+r[1]+r[1]+r[2]+r[2]),[parseInt(r.slice(0,2),16),parseInt(r.slice(2,4),16),parseInt(r.slice(4,6),16)]}function f(r){if(!r)throw new Error("Invalid color value");return Array.isArray(r)?r:"string"==typeof r?o(r):[r.r,r.g,r.b]}function u(r,n,t){var e=!0===n?i:Object.assign({},i,n);return function(r){var n,t,e=[];for(n=0;n<r.length;n++)t=r[n]/255,e[n]=t<=.03928?t/12.92:Math.pow((t+.055)/1.055,2.4);return.2126*e[0]+.7152*e[1]+.0722*e[2]}(r)>e.threshold?t?o(e.black):e.black:t?o(e.white):e.white}function r(r,n){return void 0===n&&(n=!1),r=f(r),n?u(r,n):"#"+r.map(function(r){return n=(255-r).toString(16),void 0===t&&(t=2),(new Array(t).join("0")+n).slice(-t);var n,t}).join("")}return function(r){function n(r,n){r=f(r);var t,e=n?u(r,n,!0):r.map(function(r){return 255-r});return{r:(t=e)[0],g:t[1],b:t[2]}}r.asRGB=n,r.asRgbArray=function(r,n){return r=f(r),n?u(r,n,!0):r.map(function(r){return 255-r})},r.defaultThreshold=t,r.asRgbObject=n}(r||(r={})),r});
+				var hue = rgbToHsl(r, g, b)[0] * 360;
+					hue += "deg";
+				var sat = rgbToHsl(r, g, b)[1] * 100;
+					sat += "%";
+				var lum = rgbToHsl(r, g, b)[2] * 200;
+					lum += "%";
+				var palette2 = ColorLuminance((document.getElementById("inColor").value), -0.4)
+				var palette3 = invert((document.getElementById("inColor").value))
+				var palette4 = ColorLuminance(palette3, 0.5)
+				
+				document.documentElement.style
+					.setProperty('--palette1', (document.getElementById("inColor").value));
+				document.documentElement.style
+					.setProperty('--palette2', palette2);
+				document.documentElement.style
+					.setProperty('--palette3', palette3);
+				document.documentElement.style
+					.setProperty('--palette4', palette4);
+				document.documentElement.style
+					.setProperty('--monohue', hue);
+				document.documentElement.style
+					.setProperty('--monosat', sat);
+				document.documentElement.style
+					.setProperty('--monolum', lum);
+			}
+		window.onload = changeColor;
+		</script>
+		<style>
+		:root {
+			--palette1: #89D947;
+			--palette2: #52822a;
+			--palette3: #7626b8;
+			--palette4: #b139ff;
+			--monohue: 92.8767deg;
+			--monosat: 65.7658%;
+			--monolum: 112.941%;
+		}
+		li {
+			padding: 5px;
+			transition: 0.5S;
+		}
+		li.active {
+			padding: 20px;
+			transition: 0.5S;
+		}
+		input {
+			width: 1.45em;
+		}
+		.fancy {
+			font-family: 'Pinyon Script', cursive;
+			font-size: 1.5em;
+		}
+		.image {
+			filter: sepia(100%) brightness(var(--monolum)) saturate(var(--monosat)) hue-rotate(calc(var(--monohue) - 38.37deg));
+			transition: 0.5S;
+		}
+		.untilthen {
+			filter: hue-rotate(var(--monohue)) saturate(var(--monosat));
+			width: 45%;
+			transition: 0.5S;
+		}
+		</style>
+		<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.js'></script>
+		<script src="profiles/playlist.js"></script>
+	</head>
+<body>
+<header>
+	<center>
+		<a class="logo" href="HomeLogged.html">
+			<img class="MajorTom" src="logomono.gif">
+		</a>
+			<div class="Major">
+				<a href="HomeLogged.html">HOME</a> | 
+				<a href="Friends.html">FRIEND LIST</a> | 
+				<a href="AboutLogged.html">ABOUT</a> | 
+				<a href="Home.html">LOG OUT</a>
+			</div>
+			<hr />
+	</center>
+</header>
+<section>
+<center>
+	<article>
+		<div>
+			<div class="Profile">
+						<div class="image">
+							<img class="Pic" src="profiles/Profile Pics/elias.png">
+							<img class="PicReal" src="profiles/Profile Pics/elias.png">
+						</div>
+				<p class="Major">NICKNAMES:</br>"Elias"</p>
+			</div>
+				<h2 class="Major">Elias Miquel P. Rosel</h2>
+					<br>
+					<p>Today is a good day <br>
+					appreciate it or die</p>
+					<img class="untilthen" src="profiles/B18/until then.png"><br>
+					(doesn't work in CefSharp!!) <br>
+					pick your fave color: 
+					<input type="color" value="#89D947" id="inColor" oninput="changeColor()"/>
+					<button onclick="myFunction()">restore defaults</button>
+					<div>
+						<br>
+						<br>
+						<h2 class="Major">BIOLOGICAL INFORMATION</h2>
+						<iframe src="bioB18.html" class="bio"></iframe>
+					</div>
+		</div>
+	</article>
+	<article>
+		<div>
+			<h2 class="Major">MUSIC</h2>
+				<center>
+						<br>
+						click on one of the tracks!
+						<audio id="audio" id="uploadedFile" preload="auto" tabindex="0" controls="" type="audio/mpeg">whoops! looks like it isn't supported :(</audio></br>
+						<ul id="playlist">
+							<li><a class="trax" href="profiles\B18\Kill The Noise & Mat Zo Part I (Krayysh Remix).mp3">
+							Kill The Noise & Mat Zo Part I (Krayysh Remix)</a></li>
+							<li><a class="trax" href="profiles\B18\Virtual Riot - Stay For A While (FREE DOWNLOAD).mp3">
+							Virtual Riot - Stay For A While </a></li>
+							<li><a class="trax" href="profiles\B18\Krayysh - Take A Look And See.mp3">
+							Krayysh - Take A Look And See</a></li>
+							<li><a class="trax" href="profiles\B18\Virtual Riot - One Two (OUT 10.24).mp3">
+							Virtual Riot - One Two</a></li>
+							<li><a class="trax" href="profiles\B18\Virtual Riot - Pixel Forest.mp3">
+							Virtual Riot - Pixel Forest</a></li>
+						</ul>
+						<a href="https://ericaofanderson.tumblr.com/post/164138796672/starscream" target="_blank">image source</a></br>
+				</center>
+		</div>
+	</article>
+	<footer>
+		<p>Return to <a class="Major" href="HomeLogged.html"> HOME </a></p>
+	</footer>
+</section>
+</center>
+</body>
+</html>

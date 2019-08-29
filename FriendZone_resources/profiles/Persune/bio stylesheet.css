@@ -1,0 +1,121 @@
+:root {
+	--trans: rgba(0, 0, 0, 0)
+	--bgblack: rgba(0, 0, 0, 0.75);
+	--bggray1: #080808;
+	--bggray2: #121212;
+	--bggray3: #525252;
+	--bggray4: #969696;
+	--textcolor: white;
+	--palette1: #cc2eb4;
+	--palette2: #831D76;
+	--palette3: #6959d5;
+	--palette4: #3c2ca9;
+	--monohue: 309.11deg;
+	--monosat: 100%;
+	--monolum: 100%;
+}
+body {
+	background-color: rgba(0, 0, 0, 0);
+	color: white;
+	font-family: 'Roboto Mono', monospace;
+	margin: 0px;
+	margin-top: 20px;
+}
+header {
+	font-family: 'Major Mono Display', monospace;
+}
+hr {
+	margin-top: 10px;
+	background-color: ;
+}
+article {
+	width: 720px;
+	text-align: justify;
+}
+table {
+	border: 3px solid var(--bggray4);
+	margin-top: 20px;
+	width: 100%;
+	text-align: justify
+}
+td, th {
+	border: 2px solid var(--bggray3);
+	padding; 8px;
+	text-align: justify;
+}
+p {
+	color: white;
+	font-family: 'Roboto Mono', monospace;
+}
+.aragraph {
+	text-indent: 2.0em;  
+}
+.Major {
+	margin: 0px;
+	text-align: center;
+	font-family: 'Major Mono Display', monospace;
+	background-color: var(--bggray2);
+	color: white;
+}
+.MajorTom {
+	margin: 0px;
+	text-align: center;
+	font-family: 'Major Mono Display', monospace;
+	color: white;
+}
+.Major:hover {
+	margin: 0px;
+	text-align: center;
+	font-family: 'Major Mono Display', monospace;
+	color: white;
+    animation: pulse 0.5s linear infinite;
+	animation-timing-function: ease;
+}
+.MajorTom:hover {
+	margin: 0px;
+	text-align: center;
+	font-family: 'Major Mono Display', monospace;
+	color: white;
+    animation: pulse 0.5s linear infinite;
+	animation-timing-function: ease;
+}
+@keyframes pulse {
+	0% {
+		filter: brightness(200%) sepia(100%) hue-rotate(calc(var(--monohue) - 38.71deg)) saturate(200%);
+	}
+	50% {
+		filter: brightness(400%) sepia(100%) hue-rotate(calc(var(--monohue) - 38.71deg)) saturate(400%);
+	}
+	100% {
+		filter: brightness(200%) sepia(100%) hue-rotate(calc(var(--monohue) - 38.71deg)) saturate(200%);
+	}
+}
+.Center{
+	text-align: center;
+}
+@media (max-width: 600px) {
+  article {
+    width: 100%;
+    height: auto;
+  }
+}
+a:link {
+  color: var(--palette1); 
+  background-color: transparent; 
+  text-decoration: none;
+}
+a:visited {
+  color: var(--palette2);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--palette3); 
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: var(--palette4);
+  background-color: transparent;
+  text-decoration: underline;
+}
