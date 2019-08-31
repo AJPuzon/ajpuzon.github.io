@@ -1,1 +1,4 @@
-![Da Friendzone Logo](/FriendZone_resources/logomonod.gif)
+<p align="center">
+  <img /FriendZone_resources/logomonod.gif>
+</p>
+
