@@ -1,4 +1,4 @@
-![FriendZone Logo](/FriendZone_resources/logomonod.gif)
+![FriendZone Logo]('/FriendZone_resources/Readme.md/DaFriend Zone Logo.png')
 
 **Goals**
 
